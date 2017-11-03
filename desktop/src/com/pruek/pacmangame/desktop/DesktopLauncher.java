@@ -1,8 +1,8 @@
-package com.pruek.pacman.desktop;
+package com.pruek.pacmangame.desktop;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import com.pruek.pacman.PacmanGame;
+import com.pruek.pacmangame.PacmanGame;
 
 public class DesktopLauncher {
 	public static void main (String[] arg) {
