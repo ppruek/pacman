@@ -1,6 +1,7 @@
 package com.pruek.pacman;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
@@ -20,7 +21,12 @@ public class GameScreen extends ScreenAdapter {
     }
     
     private void update(float delta) {
-        x += 5;    
+        if(Gdx.input.isKeyPressed(Keys.LEFT)) {
+            x -= 10;
+        }
+        if(Gdx.input.isKeyPressed(Keys.RIGHT)) {
+            x += 10;
+        }
     }
     
     public void render(float delta) {
@@ -29,7 +35,6 @@ public class GameScreen extends ScreenAdapter {
         Gdx.gl.glClearColor(0, 0, 0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         batch.begin();
-        x += 5;
         batch.draw(pacmanImg, x, y);
         batch.end();
     }
