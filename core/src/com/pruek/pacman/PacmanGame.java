@@ -8,7 +8,8 @@ public class PacmanGame extends Game {
  
     @Override
     public void create () {
-        batch = new SpriteBatch();
+    	batch = new SpriteBatch();
+        setScreen(new GameScreen(this));
     }
  
     @Override
